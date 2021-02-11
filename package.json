@@ -1,7 +1,15 @@
 {
   "name": "shopify-backup",
-  "description": "",
+  "description": "Git version control for specific Shopify files",
   "author": "Sergej Samsonenko <contact@sergej.codes>",
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "shopify:init": "npx themelab shopify:init",
+    "settings:dev": "shopify-themekit --env=dev download config/settings_data.json --config .config/shopify/shopify.dev.yml",
+    "settings:live": "shopify-themekit --env=live download config/settings_data.json --config .config/shopify/shopify.live.yml"
+  },
+  "devDependencies": {
+    "@shopify/themekit": "^1.1.7"
+  }
 }
