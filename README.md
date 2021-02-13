@@ -13,7 +13,7 @@
 <!-- title / description (start) -->
 <h2 align="center">Shopify Settings Control</h2>
 
-Automated Git version control for Shopify `settings_data.json` via CI/CD. Create a dedicated repo to backup `settings_data.json` for a Shopify store.
+Automatic Git version control for Shopify `settings_data.json` via CI/CD. Create a dedicated repo to backup `settings_data.json` for a Shopify store.
 > Designed to work with [Shopify Theme Lab](https://github.com/uicrooks/shopify-theme-lab).
 <!-- title / description (end) -->
 
