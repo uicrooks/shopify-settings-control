@@ -1,6 +1,6 @@
 {
-  "name": "shopify-backup",
-  "description": "Git version control for specific Shopify files",
+  "name": "shopify-settings-control",
+  "description": "Automated Git version control for settings_data.json via CI/CD",
   "author": "Sergej Samsonenko <contact@sergej.codes>",
   "version": "1.0.0",
   "license": "MIT",
