@@ -27,6 +27,8 @@ A GitHub action runs automatically once during the specified interval. It downlo
 
 ### GitHub actions
 
+> First, make sure the theme is already initialized on the Shopify store in question
+
 1. “Use this template” to create a new repository on GitHub
 2. Add the following four secrets to your Shopify Theme Lab repo in `settings` → `secrets`:
 ```sh
