@@ -1,0 +1,42 @@
+# Shopify Settings Control CI/CD integration for GitHub actions
+name: Shopify Settings Control
+
+on:
+  schedule:
+    - cron: "*/60 * * * *"
+  workflow_dispatch: # allows to manually run from GitHub actions panel
+
+jobs:
+  backup:
+    name: Backup
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 14.x ]
+
+    steps:
+      - name: Checkout master branch
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Download from Shopify store
+        run: |
+          npx themelab shopify:init -p ${{ secrets.SHOPIFY_API_PASSWORD }} -s ${{ secrets.SHOPIFY_STORE_URL }} -e ${{ secrets.SHOPIFY_ENV }} -i ${{ secrets.SHOPIFY_THEME_ID }}
+          npm run settings:${{ secrets.SHOPIFY_ENV }}
+
+      - name: Push to repo
+        shell: bash {0}
+        run: |
+          git config --global user.name 'Bot'
+          git config --global user.email 'bot@users.noreply.github.com'
+          git add .
+          git commit -m 'automated backup'
+          git push
