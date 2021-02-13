@@ -19,11 +19,13 @@ Automatic Git version control for Shopify `settings_data.json` via CI/CD. Create
 
 <!-- how it works (start) -->
 ## How it works
-A GitHub action runs automatically once during the specified interval. It downloads the `settings_data.json` file from the provided Shopify store. If the remote file has changed it's committed and then pushed to this repo, if not, nothing happens. This project has a similar directory structure to Shopify Theme Lab, you will find the settings file in `shopify/config/settings_data.json` once it's added to this repo.
+A GitHub action runs automatically once during the specified interval. It downloads the `settings_data.json` file from the provided Shopify store. If the remote file has changed, it's committed and then pushed to this repo, if not, nothing happens. This project has a similar directory structure to Shopify Theme Lab, you will find the settings file in `shopify/config/settings_data.json` once it's added to this repo.
 <!-- how it works (end) -->
 
 <!-- getting started (start) -->
 ## Getting started
+
+### GitHub actions
 
 1. “Use this template” to create a new repository on GitHub
 2. Add the following four secrets to your Shopify Theme Lab repo in `settings` → `secrets`:
