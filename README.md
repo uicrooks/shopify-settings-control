@@ -40,7 +40,7 @@ SHOPIFY_THEME_ID # theme-id (without quotation marks) - find the id either in sh
 
 <!-- adjusting schedule (start) -->
 ## Adjusting schedule
-By default, the action is set to run once every hour. You can adjust the `cron` schedule inside [main.yml](.github/workflows/shopify-settings-control.yml) to change the interval.
+By default, the action is set to run once every hour. You can adjust the `cron` schedule inside [shopify-settings-control.yml](.github/workflows/shopify-settings-control.yml) to change the interval.
 
 ```yml
 on:
