@@ -40,6 +40,15 @@ SHOPIFY_THEME_ID # theme-id (without quotation marks) - find the id either in sh
 3. Test the action by going to `actions` → `Shopify Settings Control` and click on `Run workflow`
 <!-- getting started (end) -->
 
+<!-- published theme (start) -->
+## Published theme
+If you want to back up the settings for the published/main theme, pass the `--main` flag (shorthand `-m`) instead of the `--id` / `-i` option when initializing the config:
+
+```yml
+npx themelab shopify:init -p ${{ secrets.SHOPIFY_API_PASSWORD }} -s ${{ secrets.SHOPIFY_STORE_URL }} -e ${{ secrets.SHOPIFY_ENV }} -m
+```
+<!-- published theme (end) -->
+
 <!-- adjusting schedule (start) -->
 ## Adjusting schedule
 By default, the action is set to run once every hour. You can adjust the `cron` schedule inside [shopify-settings-control.yml](.github/workflows/shopify-settings-control.yml) to change the interval.

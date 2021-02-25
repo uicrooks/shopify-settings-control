@@ -2,7 +2,7 @@
   "name": "shopify-settings-control",
   "description": "Automatic Git version control for Shopify settings_data.json via CI/CD",
   "author": "Sergej Samsonenko <contact@sergej.codes>",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "shopify:init": "npx themelab shopify:init",
