@@ -42,7 +42,7 @@ SHOPIFY_THEME_ID # theme-id (without quotation marks) - find the id either in sh
 
 <!-- published theme (start) -->
 ## Published theme
-If you want to back up the settings for the published/main theme, pass the `--main` flag (shorthand `-m`) instead of the `--id` / `-i` option:
+If you want to back up the settings for the published/main theme, pass the `--main` flag (shorthand `-m`) instead of the `--id` / `-i` option when initializing the config:
 
 ```yml
   npx themelab shopify:init -p ${{ secrets.SHOPIFY_API_PASSWORD }} -s ${{ secrets.SHOPIFY_STORE_URL }} -e ${{ secrets.SHOPIFY_ENV }} -m
